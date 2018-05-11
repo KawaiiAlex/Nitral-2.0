@@ -10,18 +10,18 @@ var bangEmbed = new Discord.RichEmbed()
 .setDescription(`${message.author.username}` + " a tiré sur Nitral")
 .setImage(banging)
 .setTimestamp()
-.setFooter(`Shoot`)
+.setFooter(`Bang`)
 message.channel.send (bangEmbed)
-console.log(`${message.author.username} | Shoot`)
+console.log(`${message.author.username} | Bang`)
 }else{
 var bangEmbed = new Discord.RichEmbed()
 .setColor ('#00FAD9')
 .setDescription(`${message.author.username}` + " a tiré sur" + defineduser.username)
 .setImage(banging)
 .setTimestamp()
-.setFooter(`Shoot`)
+.setFooter(`Bang`)
 message.channel.send (bangEmbed)
-console.log(`${message.author.username} | Shoot`)
+console.log(`${message.author.username} | Bang`)
 }
 }
 
