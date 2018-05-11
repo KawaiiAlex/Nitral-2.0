@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 exports.run = (client, message, args) => {
 
   var stare = ["https://cdn.weeb.sh/images/BkkqI1YPZ.jpeg", "https://cdn.weeb.sh/images/HJxqIyFvZ.gif", "https://cdn.weeb.sh/images/BJ88vLvd-.gif", "https://cdn.weeb.sh/images/rk23UyYP-.gif", "https://cdn.weeb.sh/images/rk0v81YwW.gif", "https://cdn.weeb.sh/images/SkH3Uytwb.gif", "https://cdn.weeb.sh/images/B1tO8JYD-.gif", "https://cdn.weeb.sh/images/HyWnLyKPZ.gif", "https://cdn.weeb.sh/images/SJ9_8kFwb.gif", "https://cdn.weeb.sh/images/H1e83lytw-.gif"]
-
+let defineduser = message.mentions.users.first();
 var staring = stare[Math.floor(Math.random() * stare.length)] ;
 
 if (!defineduser){
