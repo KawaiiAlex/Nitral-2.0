@@ -2,7 +2,7 @@ const Discord = require('discord.js')
 const moment = require ("moment")
 const ms = require("ms");
 exports.run = (client, message, args) => {
-  var totalcmd =  Math.floor(filesfun.length + filesinfo.length + filesmod.length + filessocial.length + filesnsfw.length + filesadmin.length + filesmusic.length);
+  //var totalcmd =  Math.floor(filesfun.length + filesinfo.length + filesmod.length + filessocial.length + filesnsfw.length + filesadmin.length + filesmusic.length);
 
 const used = process.memoryUsage().heapUsed / 1024 / 1024;
 let ms = client.uptime;
@@ -72,7 +72,7 @@ const embed = new Discord.RichEmbed()
 .setThumbnail(message.author.iconURL)
 .addField(':clock: Actif ', 'Le bot est actif', false )
 .addField(':white_check_mark: Bot actif depuis :', dateString, false )
-.addField ('Nombre de commande', `${totalcmd} commandes`, false) 
+//.addField ('Nombre de commande', `${totalcmd} commandes`, false) 
 .addField ('📈 Utilisation mémoire' , `${Math.round(used * 100) / 100} MB/500MB`, false)
 .addField(':runner: Serveur disponible :', `**${client.guilds.size}** servers`, false )
 .addField ('👥 Utilisateur:', ` ${client.users.size} utilisateurs`, false)
