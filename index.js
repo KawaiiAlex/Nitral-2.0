@@ -181,5 +181,6 @@ if(!coins[message.author.id]){
     if (err) console.log(err)
   });
   }
+  });
 
 client.login(process.env.TOKEN)
