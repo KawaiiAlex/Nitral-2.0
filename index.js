@@ -33,7 +33,7 @@ fs.readdir('./commands/Fun/', (err, filesfun) => {
 
 fs.readdir('./commands/Info/', (err, filesinfo) => {
   if (err) console.error(err);
-  console.log(orangecolor(`${filesinfo.length} commandes information 💻,`));
+  console.log(`${filesinfo.length} commandes information 💻,`);
   filesinfo.forEach(f => {
     const props = require(`./commands/Info/${f}`);
     client.commands.set(props.help.name, props);
