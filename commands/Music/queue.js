@@ -60,11 +60,11 @@ exports.run = (client, message, args) => {
                 name: client.user.username,
                 icon_url: client.user.avatarURL
             },
-            color: 0x00FF00,
+            color: "#AB49CD",
             title: `Queue`,
             description: `\n${text}`
         }
-    }).then(response => { response.delete(5000) });
+    })
     }else{
     if (queue.length == 0) return message.channel.send("No music in queue");
     let text = '';
@@ -77,11 +77,11 @@ exports.run = (client, message, args) => {
                 name: client.user.username,
                 icon_url: client.user.avatarURL
             },
-            color: 0x00FF00,
+            color: "#AB49CD",
             title: `Queue`,
             description: `\n${text}`
         }
-    }).then(response => { response.delete(5000) });
+    })
     }
 }
 
