@@ -21,3 +21,4 @@ exports.run = (client, message, args) => {
     name: 'pièce',
     description: 'Pile ou face ',
     usage: 'pièce '
+  }
