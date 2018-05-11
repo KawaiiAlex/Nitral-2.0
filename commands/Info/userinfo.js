@@ -5,7 +5,7 @@ const ms = require('ms');
 const sm = require("string-similarity");
 
 exports.run = async (client, message, args) => {
-
+let defineduser = message.mentions.users.first();
 
   	  if(message.author.bot) return;
     if(message.channel.type !== "text") return;
