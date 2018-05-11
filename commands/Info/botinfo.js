@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const ms = require("ms");
 const moment = require ("moment")
 exports.run = (client, message) => {
-
+const used = process.memoryUsage().heapUsed / 1024 / 1024;
   let ms = client.uptime;
   let cd = 24 * 60 * 60 * 1000; // Calc days
   let ch = 60 * 60 * 1000; // Calc hours
