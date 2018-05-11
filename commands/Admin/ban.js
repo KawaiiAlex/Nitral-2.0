@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const {RichEmbed} = require('discord.js');
 exports.run = (client, message, args) => {
-
+let defineduser = message.mentions.users.first();
   if (!message.channel.permissionsFor(message.author).hasPermission("BAN_MEMBERS")) {
   message.channel.send ("📛 Tu n'as pas la permission 📛");
   console.log("📛 Tu n'as pas la permission 📛");
