@@ -9,4 +9,4 @@ module.exports = client => { // eslint-disable-line no-unused-vars
           //bot.user.setActivity("En maintenance")
 
     console.log("Je suis connecté !\n====================================\n\n" + client.users.size + " utilisateurs \n" + client.guilds.size + " serveurs \n\n====================================\n\n" + bot.guilds.array ())
-  })
+  }
