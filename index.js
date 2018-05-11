@@ -131,56 +131,5 @@ client.on('warn', e => {
 client.on('error', e => {
   console.log(chalk.bgRed(e.replace(regToken, 'qui a été expurgé')));
 });
-let xpAdd = Math.floor(Math.random() * 10) + 8;
-//  console.log(xpAdd);
-client.on("message", async message => {
-
-let xp = require("./xp.json");
-  if(!xp[message.author.id]){
-    xp[message.author.id] = {
-      xp: 0,
-      level: 1
-    };
-  }
-  let curxp = xp[message.author.id].xp;
-  let curlvl = xp[message.author.id].level;
-  let nxtLvl = xp[message.author.id].level * 300;
-  xp[message.author.id].xp =  curxp + xpAdd;
-  if(nxtLvl <= xp[message.author.id].xp){
-    xp[message.author.id].level = curlvl + 1;
-
-
-  }
-  fs.writeFile("../../xp.json", JSON.stringify(xp), (err) => {
-    if(err) console.log(err)
-  });
-
-if(!xp[message.author.id]){
-xp[message.author.id] = {
-xp: 0,
-level: 1
-};
-}
-
-let coins = require("./coins.json");
-if(!coins[message.author.id]){
-    coins[message.author.id] = {
-      coins: 0
-    };
-  }
-
-  let coinAmt = Math.floor(Math.random() * 15) + 1;
-  let baseAmt = Math.floor(Math.random() * 15) + 1;
-
-
-  if(coinAmt === baseAmt){
-    coins[message.author.id] = {
-      coins: coins[message.author.id].coins + coinAmt
-    };
-  fs.writeFile("./coins.json", JSON.stringify(coins), (err) => {
-    if (err) console.log(err)
-  });
-  }
-  });
 
 client.login(process.env.TOKEN)
