@@ -14,16 +14,20 @@ exports.run = (client, message, params) => {
   let prefix = prefixes[message.guild.id].prefixes;
   if (!params[0]) {
     var HelpEmbed = new Discord.RichEmbed()
-    .setTitle(`Utilise ${prefix}help <commande> pour les infos de la commande`)
-    .setColor("#689AFB")
-    .addField("Administration", "`ban`, `lockdown`, `prefix`, `unban`")
-    .addField("Modération", "`addrole`, `kick`, `mute`, `purge`, `removerole`, `warn`")
-    .addField("Information", "`help`, `botinfo`, `serverinfo`, `userinfo`, `report`, `ping`, `otaku`, `invite`, `weather`, `google`, `youtube`, `warnlevel`, `time`")
-    .addField("Fun", "`8ball`, `anime`, `avatar`, `cat`, `poke`, `pollc`, `quiz`, `reverse`, `roll`, `say`")
-    .addField("Music", "`play`, `stop`, `skip`, `volume`")
-    .addField("Social", "`hug`, `cry`, `kiss`, `punch`, `pout`, `pat`")
-    .addField("NSFW", "`4k`, `amateur`, `asian`, `cosplay`, `dick`, `gif`, `hentai`, `milf`, `public`, `pussy`, `snapchat`, `uniform`")
-    .setFooter("๖̶̶̶ζ͜͡Bot par Kawaii Alex ͜͡ζ̶̶̶๖", client.users.get('281125214098685954').displayAvatarURL);
+     .setColor('#B9121B')
+         .setTitle ("Toutes les commandes ")
+         .setDescription("Pour le bon fonctionnement du bot merci de faire la commande`" + prefix + "setup`. En cas de probleme merci de vous rendre sur le serveur en faisant `" + prefix +"botinfo` dans l'onglet 'Invitation du bot'",false)
+     .addField ("**__Membres__** :busts_in_silhouette: :", "`setup`, `help`, `ping`, `avatar`, `poke`, `afk`, `remafk`, `invite`, `check`, `google`, `youtube`, `playstore`, `apple`, `h`", false)
+    .addField ("**__XP__** :rosette: : *(bug)*", "`levels`, `xp`, `progress`",false)
+    .addField ("**__Economie__** :euro: : *(bug)*","`coins`",false)
+    .addField ("**__Fun__** :tada: :" ,"`anime`,`rps`, `roll`, `cat`, `dog`, `astrologia`, `triggered`, `dice`, `verlan`, `piece`, `say`" ,false)
+    .addField ("**__Info__** :gear: :" ,"`uptime`, `userinfo`, `serverinfo`, `warnlevel`, `time`, `botinfo`, `diserver`, `weather`" , false)
+    .addField ("**__Admin__** :tools: :" , "`roleadd`, `rolerem`, `createrole`, `mute`, `unmute`, `kick`, `ban`, `purge`, `report`, `warn`,`warnlevel`, `lockdown`, `time`",false)
+    .addField("**__Musique__** :musical_score: :", "`play`, `stop`, `skip`, `volume`",false)
+    .addField("**__Social__** :handshake: :", "`bite`, `kiss`, `hug`, `cry`, `pat`, `pout`, `punch`, `handholding`, `shoot`, `stare`, `slap`, `fuck`, `res`, `everyone`, `troll`, `highfive`, `pollc`",false)
+    .addField("**__NSFW__** :smirk:", "`4k`, `amateur`, `asian`, `cosplay`, `dick`, `gif`, `hentai`, `milf`, `public`, `pussy`, `snapchat`, `uniform`",false)
+    .setTimestamp()
+    .setFooter("Help");
 
     message.channel.send(HelpEmbed)
 
