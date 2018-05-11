@@ -47,22 +47,22 @@ exports.run = (client, message, args) => {
     }
 
         if(language == "fr"){
-        if (!message.member.voiceChannel) return message.channel.send('Vous devez être dans un channel vocal').then(response => { response.delete(5000) });
+        if (!message.member.voiceChannel) return message.channel.send('Vous devez être dans un channel vocal')
         let player = message.guild.voiceConnection.player.dispatcher
-        if (!player) return message.channel.send('Aucune musique ne joue à ce moment.').then(response => { response.delete(5000) });
-        if (player.playing) return message.channel.send('La musique joue déjà').then(response => { response.delete(5000) });
+        if (!player) return message.channel.send('Aucune musique n\'est joué à ce moment.')
+        if (player.playing) return message.channel.send('La musique joue déjà')
         }else{
-        if (!message.member.voiceChannel) return message.channel.send('You need to be in a voice channel').then(response => { response.delete(5000) });
+        if (!message.member.voiceChannel) return message.channel.send('You need to be in a voice channel')
         let player = message.guild.voiceConnection.player.dispatcher
-        if (!player) return message.channel.send('No music is playing at this time.').then(response => { response.delete(5000) });
-        if (player.playing) return message.channel.send('The music is already playing').then(response => { response.delete(5000) });
+        if (!player) return message.channel.send('No music is playing at this time.')
+        if (player.playing) return message.channel.send('The music is already playing')
         }
         var queue = getQueue(message.guild.id);
         player.resume();
         if(language=='fr'){
-            message.channel.send("Reprise de la musique ...").then(response => { response.delete(5000) });
+            message.channel.send("Reprise de la musique ...")
         }else{
-            message.channel.send("Resuming music...").then(response => { response.delete(5000) });
+            message.channel.send("Resuming music...")
         }
     }
 
