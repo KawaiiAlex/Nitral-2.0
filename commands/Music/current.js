@@ -55,7 +55,7 @@ exports.run = (client, message, args) => {
                 name: client.user.username,
                 icon_url: client.user.avatarURL
             },
-            color: 0x00FF00,
+            color: 0xA64D79,
             title: `Lecture actuelle`,
             description: `${queue[0].title} | par ${queue[0].requested}`
         }
@@ -68,7 +68,7 @@ exports.run = (client, message, args) => {
                 name: client.user.username,
                 icon_url: client.user.avatarURL
             },
-            color: 0x00FF00,
+            color: 0xA64D79,
             title: `Currently playing`,
             description: `${queue[0].title} | by ${queue[0].requested}`
         }
