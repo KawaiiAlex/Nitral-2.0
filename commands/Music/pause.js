@@ -47,17 +47,16 @@ exports.run = (client, message, args) => {
     }
 
     if(language == "fr"){
-        if (!message.member.voiceChannel) return message.channel.send('Vous devez être dans un channel vocal').then(response => { response.delete(5000) });
+        if (!message.member.voiceChannel) return message.channel.send('Vous devez être dans un channel vocal')
         let player = message.guild.voiceConnection.player.dispatcher
-        if (!player || player.paused) return message.channel.send("Bot ne joue pas!").then(response => { response.delete(5000) });
+        if (!player || player.paused) return message.channel.send("Bot ne joue pas!")
         player.pause();
-        message.channel.send("Musique en pause...").then(response => { response.delete(5000) });
-    }else{
-        if (!message.member.voiceChannel) return message.channel.send('You need to be in a voice channel').then(response => { response.delete(5000) });
+        message.channel.send("Musique en pause...")
+        if (!message.member.voiceChannel) return message.channel.send('You need to be in a voice channel')
         let player = message.guild.voiceConnection.player.dispatcher
-        if (!player || player.paused) return message.channel.send("Bot is not playing").then(response => { response.delete(5000) });
+        if (!player || player.paused) return message.channel.send("Bot is not playing")
         player.pause();
-        message.channel.send("Pausing music...").then(response => { response.delete(5000) }); 
+        message.channel.send("Pausing music...")
     }
    
 }
