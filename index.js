@@ -18,7 +18,7 @@ const log = message => {
   console.log(`[${moment().format('HH:mm:ss')}] ${message}`);
 };
 
-client.commands = new Discord.Collection();
+/*client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
 fs.readdir('./commands/Fun/', (err, filesfun) => {
   if (err) console.error(err);
@@ -103,7 +103,7 @@ console.log(bluecolor(`Il y a un total de ${totalcmd} commandes 👍.`));
 });
 });
 });
-});
+});*/
 
 
 client.elevation = message => {
