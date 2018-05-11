@@ -1,55 +1,52 @@
-const Discord = require("discord.js");
+ const Discord = require("discord.js");
 const moment = require("moment");
 require("moment-duration-format");
 const ms = require('ms');
 const sm = require("string-similarity");
 
 exports.run = async (client, message, args) => {
- if (!message.guild) {
-        throw '9a ne peut être utiliser que dans un serveur';
+
+  if(message.author.bot) return;
+  if(message.channel.type !== "text") return;
+  
+  let members = [];
+  let indexes = [];
+  
+  message.guild.members.forEach(function(member){
+    members.push(member.user.username);
+    indexes.push(member.id);
+  })
+  
+  let match = sm.findBestMatch(args.join(' '), members);
+  let username = match.bestMatch.target;
+  
+    let member = message.guild.members.get(indexes[members.indexOf(username)])
+    
+     let definedUser = "";
+     let definedUser2 = "";
+    if(!args[0]) {
+      definedUser = message.author
+      definedUser2 = message.member
+    } else {
+      let mention = message.mentions.users.first()
+      definedUser = mention || member.user
+        definedUser2 = message.mentions.members.first() || message.guild.members.get(args[0]) || member
     }
-
-    //Makes sure user mentions a user to get info for
-    if (message.mentions.users.size < 1) {
-        throw '@mention quelqu\'un pour les infos';
-    }
-
-    let user = message.mentions.users.first();
-    let member = message.guild.member(user);
-
-    if (!member) {
-        throw 'Je ne trouve pas cette utilisateur';
-    }
-
-    //How long ago the account was created
-    const millisCreated = new Date().getTime() - user.createdAt.getTime();
-    const daysCreated = millisCreated / 1000 / 60 / 60 / 24;
-
-    //How long about the user joined the server
-    const millisJoined = new Date().getTime() - member.joinedAt.getTime();
-    const daysJoined = millisJoined / 1000 / 60 / 60 / 24;
-
-    // Slice off the first item (the @everyone)
-    let roles = member.roles.array().slice(1).sort((a, b) => a.comparePositionTo(b)).reverse().map(role => role.name);
-    if (roles.length < 1) roles = ['None'];
-
-      
   
   let uEmbed = new Discord.RichEmbed()
   .setDescription("**Informations Utilisateurs **")
   .setColor("#DE53D0")
-  .setThumbnail(user.displayAvatarURL)
-  .addField("**Pseudo**", user.username, false)
-  .addField("**#**", user.discriminator, false)
-  .addField("**ID**", user.id, false)
-  .addField("**Bot**", `${user.bot ? "Oui" : "Non"}`, false)
-  .addField("**Statuts**",`${(user.presence.game && user.presence.game && user.presence.game.name) || 'Ne joue pas.'}`, false) 
-  .addField("**Jeu**", `${(user.presence.game && user.presence.game && user.presence.game.name) || 'Ne joue pas.'}` : "Ne joue a rien"}, false)
-  .addField("**Création du compte**", `${moment.utc(user.createdAt).format("D/M/Y, HH:mm:ss")} (${daysCreated.toFixed(0)} jours), {long: true})})`, false)
-  .addField("**Date d'arrivée**", `${moment.utc(member.joinedAt).format("D/M/Y, HH:mm:ss")} (${daysJoined.toFixed(0)} jours) `, false)
-   .addField("Roles", `${roles.join(', ')}`, false)
+  .setThumbnail(definedUser.displayAvatarURL)
+  .addField("**Pseudo**", definedUser.username, true)
+  .addField("**#**", definedUser.discriminator, true)
+  .addField("**ID**", definedUser.id, true)
+  .addField("**Bot**", `${definedUser.bot ? "Oui" : "Non"}`, true)
+  .addField("**Statuts**",definedUser.presence.status, true)
+  .addField("**Jeu**", `${definedUser.presence.game ? `${definedUser.presence.game.name}` : "Ne joue a rien"}`, true)
+  .addField("**Création du compte**", `${moment.utc(definedUser.createdAt).format("D/M/Y, HH:mm:ss")} (${ms(Date.now()- moment.utc(definedUser.createdAt), {long: true})})`)
+  .addField("**Date d'arrivée sur le serv**", `${moment.utc(definedUser.joinedAt).format("D/M/Y, HH:mm:ss")}`);
+
   message.channel.send(uEmbed);
-   
 }
 
 exports.conf = {
