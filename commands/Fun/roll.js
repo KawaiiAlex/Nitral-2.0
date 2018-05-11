@@ -1,16 +1,16 @@
 const Discord = require('discord.js');
 exports.run = (client, message, args) => {
-
-  if (message.content.startsWith (prefix +  "roll")) {
+	
 		const args9 = message.content.split(" ").slice(1).join(" ");
 	if (!args9[0]){
 
           message.channel.send("Pour un usage correct faite` " + prefix + "roll [un nombre]` ")
           return;
-        }
+        }else{
 
 	 let result = Math.floor((Math.random() * args9) );
   message.channel.send("**Tu as obtenu le nombre** " + result);
+	}
 }
 
 
