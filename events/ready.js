@@ -6,7 +6,7 @@ module.exports = client => { // eslint-disable-line no-unused-vars
 
 
           client.user.setStatus( 'online' );
-          client.user.setActivity(`--help | ${client.guilds.size} serveurs  | ${client.users.size} utilisateurs`,{type: "WATCHING"});
+          client.user.setActivity(`++help | ${client.guilds.size} serveurs  | ${client.users.size} utilisateurs`,{type: "WATCHING"});
           //bot.user.setActivity("En maintenance")
 
     console.log("Je suis connecté !\n====================================\n\n" + client.users.size + " utilisateurs \n" + client.guilds.size + " serveurs \n\n====================================\n\n" + client.guilds.array ())
