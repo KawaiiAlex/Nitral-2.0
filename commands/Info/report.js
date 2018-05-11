@@ -28,7 +28,7 @@ exports.run = (client, message, args) => {
     console.log(`${message.author.username} | Report `)
         }else {
 
-    message.channel.send(`${message.author.username} vient de report ${defineduser.username}.\n\n **Raison :** ${rreason}. `);
+    message.channel.send(`${message.author.username} vient de report ${defineduser.username}.\n\n **Raison :** ${text}. `);
       let repEmbed = new Discord.RichEmbed()
          .setDescription("~Report~")
          .setColor("#e56b00")
