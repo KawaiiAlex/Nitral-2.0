@@ -5,7 +5,7 @@ exports.run = (client, message, args) => {
   "https://cdn.weeb.sh/images/SJ8I2Tuv-.gif", "https://cdn.weeb.sh/images/ryoW3T_vW.gif", "https://cdn.weeb.sh/images/r1mcJlFVz.gif","https://cdn.weeb.sh/images/ryceu6V0W.gif","https://cdn.weeb.sh/images/B12LhT_Pb.gif","https://cdn.weeb.sh/images/rymvn6_wW.gif"]
 
   var kissing = kiss[Math.floor(Math.random() * kiss.length)] ;
-
+let defineduser = message.mentions.users.first();
   if (!defineduser){
     var kissEmbed = new Discord.RichEmbed()
           .setDescription(`${message.author.username}` + " fait un bisou a Nitral")
