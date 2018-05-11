@@ -19,7 +19,7 @@ let defineduser = message.mentions.users.first();
   
   let match = sm.findBestMatch(args.join(' '), members);
   let username = match.bestMatch.target;
- ]
+ 
     let member = message.guild.members.get(indexes[members.indexOf(username)])
     const millisCreated = new Date().getTime() - defineduser.createdAt.getTime();
     const daysCreated = millisCreated / 1000 / 60 / 60 / 24;
