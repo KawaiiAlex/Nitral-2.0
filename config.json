@@ -3,7 +3,7 @@
 	"owner_id": "236627494764150784",
 	"modrolename": "Admin",
 	"adminrolename": "Modo",
-	"prefix": "--",
+	"prefix": "++",
 	"rvotes": "99",
 	"token": "TOKEN",
 	"red": "#b70000",
@@ -15,5 +15,5 @@
  	"configRev": "0.1.5",
  	"language" : "fr",
   	"language_comments" : "en",
-  	"client_id": "254661129001893889"
+  	"client_id": "435585785295667200"
 }
