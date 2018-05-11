@@ -54,7 +54,7 @@ var intent;
                             name: client.user.username,
                             icon_url: client.user.avatarURL
                         },
-                        color: "#AB49CD",
+                        color: 0xA64D79,
                         title: `Queued`,
                         description: "**" + queue[queue.length - 1].title + "**"
                     }
@@ -73,7 +73,7 @@ var intent;
                     name: client.user.username,
                     icon_url: client.user.avatarURL
                 },
-                color: "#AB49CD",
+                color: 0xA64D79,
                 title: `Lecture en cours`,
                 description: `**${queue[0].title}** | Demande par ***${queue[0].requested}***`
             }
@@ -98,11 +98,11 @@ var intent;
                     name: client.user.username,
                     icon_url: client.user.avatarURL
                 },
-                color: "#AB49CD",
+                color: 0xA64D79,
                 title: `Now Playing`,
                 description: `**${queue[0].title}** | Requested by ***${queue[0].requested}***`
             }
-                }).then(response => { response.delete(5000) });
+                })
                 console.log(`Playing ${queue[0].title} as requested by ${queue[0].requested} in ${message.guild.name}`);
                 let connection = message.guild.voiceConnection
                 if (!connection) return console.log("No Connection!");
