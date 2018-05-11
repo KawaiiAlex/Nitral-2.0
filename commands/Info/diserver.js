@@ -1,7 +1,6 @@
 const Discord = require('discord.js');
 exports.run = (client, message ) => {
 
-  if (message.content === prefix + "diserver") {
          message.channel.send ( "Connecté dans les serveur \n\n```" + bot.guilds.array () +"```" )
      message.channel.send (bot.users.size + " utilisateurs \n" + bot.guilds.size + " serveurs")
        console.log (`${message.author.username} | diserver`)
