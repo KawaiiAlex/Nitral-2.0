@@ -2,7 +2,7 @@ const {RichEmbed} = require('discord.js');
 const Discord = require('discord.js');
 const client = new Discord.Client();
 exports.run = (client, message, args) => {
-
+let defineduser = message.mentions.users.first();
   if (!message.channel.permissionsFor(message.author).hasPermission("KICK_MEMBERS")) {
   message.channel.send ("📛 Tu n'as pas la permission 📛");
   console.log("📛 Tu n'as pas la permission 📛");
