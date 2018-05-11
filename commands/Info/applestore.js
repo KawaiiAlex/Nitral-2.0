@@ -1,7 +1,6 @@
 const Discord = require('discord.js');
 exports.run = (client, message) => {
-
-  if (message.content.startsWith (prefix +"apple")) {
+	
 	let args = message.content.split(' ')
    		args.shift ()
    		message.channel.send ("Voici le résultat de votre recherche: https://www.apple.com/fr/search/"+ args.join('+') + "?src=globalnav")
