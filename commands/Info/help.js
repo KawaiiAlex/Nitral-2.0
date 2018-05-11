@@ -24,7 +24,7 @@ exports.run = (client, message, params) => {
     .addField ("**__Info__** :gear: :" ,"`uptime`, `userinfo`, `serverinfo`, `warnlevel`, `time`, `botinfo`, `diserver`, `weather`" , false)
     .addField ("**__Admin__** :tools: :" , "`roleadd`, `rolerem`, `createrole`, `mute`, `unmute`, `kick`, `ban`, `purge`, `report`, `warn`,`warnlevel`, `lockdown`, `time`",false)
     .addField("**__Musique__** :musical_score: :", "`play`, `stop`, `skip`, `volume`",false)
-    .addField("**__Social__** :handshake: :", "`bite`, `kiss`, `hug`, `cry`, `pat`, `pout`, `punch`, `handholding`, `shoot`, `stare`, `slap`, `fuck`, `res`, `everyone`, `troll`, `highfive`, `pollc`",false)
+    .addField("**__Social__** :handshake: :", "`bite`, `kiss`, `hug`, `cry`, `pat`, `pout`, `punch`, `handholding`, `bang`, `stare`, `slap`, `fuck`, `res`, `everyone`, `troll`, `highfive`, `pollc`",false)
     .addField("**__NSFW__** :smirk:", "`4k`, `amateur`, `asian`, `cosplay`, `dick`, `gif`, `hentai`, `milf`, `public`, `pussy`, `snapchat`, `uniform`",false)
     .setTimestamp()
     .setFooter("Help");
