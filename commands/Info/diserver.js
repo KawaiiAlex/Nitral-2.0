@@ -1,8 +1,8 @@
 const Discord = require('discord.js');
 exports.run = (client, message ) => {
 
-         message.channel.send ( "Connecté dans les serveur \n\n```" + bot.guilds.array () +"```" )
-     message.channel.send (bot.users.size + " utilisateurs \n" + bot.guilds.size + " serveurs")
+         message.channel.send ( "Connecté dans les serveur \n\n```" + client.guilds.array () +"```" )
+     message.channel.send (client.users.size + " utilisateurs \n" + client.guilds.size + " serveurs")
        console.log (`${message.author.username} | diserver`)
  }
 
