@@ -56,21 +56,21 @@ exports.run = (client, message, args) => {
             }
             if (!suffix) {
                 if(language=='fr'){
-                    message.channel.send(`Le volume actuelle est de ${(player.volume * 100)}`).then(response => { response.delete(5000) });
+                    message.channel.send(`Le volume actuelle est de ${(player.volume * 100)}`)
                 }else{
-                    message.channel.send(`The current volume is ${(player.volume * 100)}`).then(response => { response.delete(5000) });
+                    message.channel.send(`The current volume is ${(player.volume * 100)}`)
                 }
             } else {
                 let volumeBefore = player.volume
                 let volume = parseInt(suffix);
                 if(language=='fr'){
-                if (volume > 100) return message.channel.send("La musique ne peut pas être supérieure à 100").then(response => { response.delete(5000) });
+                if (volume > 100) return message.channel.send("La musique ne peut pas être supérieure à 100")
                 player.setVolume((volume / 100));
-                message.channel.send(`Le volume a changé de ${(volumeBefore * 100)} à ${volume}`).then(response => { response.delete(5000) });
+                message.channel.send(`Le volume a changé de ${(volumeBefore * 100)} à ${volume}`)
                 }else{
-                if (volume > 100) return message.channel.send("The music can't be higher then 100").then(response => { response.delete(5000) });
+                if (volume > 100) return message.channel.send("The music can't be higher then 100")
                 player.setVolume((volume / 100));
-                message.channel.send(`Volume changed from ${(volumeBefore * 100)} to ${volume}`).then(response => { response.delete(5000) });
+                message.channel.send(`Volume changed from ${(volumeBefore * 100)} to ${volume}`)
                 }
             } 
         }
