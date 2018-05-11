@@ -4,7 +4,7 @@ const ms = require("ms");
 let warns = JSON.parse(fs.readFileSync("./warnings.json", "utf8"));
 
 exports.run = (client, message, args) => {
-
+let defineduser = message.mentions.users.first();
         if (!message.channel.permissionsFor(message.author).hasPermission("KICK_MEMBERS")) {
           message.channel.send ("📛 Tu n'as pas la permission 📛");
           console.log("📛 Tu n'as pas la permission 📛");
