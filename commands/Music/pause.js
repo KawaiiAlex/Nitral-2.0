@@ -47,14 +47,18 @@ exports.run = (client, message, args) => {
     }
 
     if(language == "fr"){
-        if (!message.member.voiceChannel) return message.channel.send('Vous devez être dans un channel vocal')
+        if (!message.member.voiceChannel) 
+            message.channel.send('Vous devez être dans un channel vocal')
         let player = message.guild.voiceConnection.player.dispatcher
-        if (!player || player.paused) return message.channel.send("Bot ne joue pas!")
+        if (!player || player.paused) 
+            message.channel.send("Bot ne joue pas!")
         player.pause();
         message.channel.send("Musique en pause...")
-    }else{ (!message.member.voiceChannel) return message.channel.send('You need to be in a voice channel')
+    }else{ (!message.member.voiceChannel) 
+          message.channel.send('You need to be in a voice channel')
         let player = message.guild.voiceConnection.player.dispatcher
-        if (!player || player.paused) return message.channel.send("Bot is not playing")
+        if (!player || player.paused) 
+            message.channel.send("Bot is not playing")
         player.pause();
         message.channel.send("Pausing music...")
     }
