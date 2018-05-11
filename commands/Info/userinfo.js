@@ -5,7 +5,7 @@ const ms = require('ms');
 const sm = require("string-similarity");
 
 exports.run = async (client, message, args) => {
-
+let defineduser = message.mentions.users.first();
   if(message.author.bot) return;
   if(message.channel.type !== "text") return;
   
@@ -38,13 +38,13 @@ exports.run = async (client, message, args) => {
   .setColor("#DE53D0")
   .setThumbnail(definedUser.displayAvatarURL)
   .addField("**Pseudo**", definedUser.username, true)
-  .addField("**#**", definedUser.discriminator, true)
-  .addField("**ID**", definedUser.id, true)
-  .addField("**Bot**", `${definedUser.bot ? "Oui" : "Non"}`, true)
-  .addField("**Statuts**",definedUser.presence.status, true)
-  .addField("**Jeu**", `${definedUser.presence.game ? `${definedUser.presence.game.name}` : "Ne joue a rien"}`, true)
-  .addField("**Création du compte**", `${moment.utc(definedUser.createdAt).format("D/M/Y, HH:mm:ss")} (${ms(Date.now()- moment.utc(definedUser.createdAt), {long: true})})`)
-  .addField("**Date d'arrivée sur le serv**", `${moment.utc(definedUser.joinedAt).format("D/M/Y, HH:mm:ss")}`);
+  .addField("**#**", defineduser.discriminator, true)
+  .addField("**ID**", defineduser.id, true)
+  .addField("**Bot**", `${defineduser.bot ? "Oui" : "Non"}`, true)
+  .addField("**Statuts**",defineduser.presence.status, true)
+  .addField("**Jeu**", `${defineduser.presence.game ? `${defineduser.presence.game.name}` : "Ne joue a rien"}`, true)
+  .addField("**Création du compte**", `${moment.utc(defineduser.createdAt).format("D/M/Y, HH:mm:ss")} (${ms(Date.now()- moment.utc(defineduser.createdAt), {long: true})})`)
+  .addField("**Date d'arrivée sur le serv**", `${moment.utc(defineduser.joinedAt).format("D/M/Y, HH:mm:ss")}`);
 
   message.channel.send(uEmbed);
 }
