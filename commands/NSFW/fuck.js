@@ -16,8 +16,9 @@ exports.run = (client, message, args) => {
                   const embed = new Discord.RichEmbed()
                       .setTimestamp()
                       .setImage(url)
+                  .settitle (`<@${message.author.id}> baise ${text}`)
                       .setColor(`${message.guild.me.displayHexColor!=='#00000' ? message.guild.me.displayHexColor : 0xffffff}`)
-                      message.channel.send(`<@${message.author.id}> baise ${text}`)
+                      
                        message.channel.send({ embed });
     })
 
