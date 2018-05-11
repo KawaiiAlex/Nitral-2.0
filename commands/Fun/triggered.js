@@ -12,7 +12,6 @@ cuteapi.generate("triggered", image).then(r => { message.channel.send({ file: { 
 }}) ;
 })
 }
-})
 
   exports.conf = {
     enabled: true,
