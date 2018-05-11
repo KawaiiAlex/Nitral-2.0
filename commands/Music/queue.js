@@ -60,7 +60,7 @@ exports.run = (client, message, args) => {
                 name: client.user.username,
                 icon_url: client.user.avatarURL
             },
-            color: "#AB49CD",
+            color: 0xA64D79,
             title: `Queue`,
             description: `\n${text}`
         }
@@ -77,7 +77,7 @@ exports.run = (client, message, args) => {
                 name: client.user.username,
                 icon_url: client.user.avatarURL
             },
-            color: "#AB49CD",
+            color: 0xA64D79,
             title: `Queue`,
             description: `\n${text}`
         }
