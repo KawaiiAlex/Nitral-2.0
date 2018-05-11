@@ -54,11 +54,11 @@ var intent;
                             name: client.user.username,
                             icon_url: client.user.avatarURL
                         },
-                        color: 0x00FF00,
+                        color: "#AB49CD",
                         title: `Queued`,
                         description: "**" + queue[queue.length - 1].title + "**"
                     }
-                        }).then(response => { response.delete(5000) });
+                        })
                     if (test) {
                         setTimeout(function() {
                             play(message, queue)
@@ -73,11 +73,11 @@ var intent;
                     name: client.user.username,
                     icon_url: client.user.avatarURL
                 },
-                color: 0x00FF00,
+                color: "#AB49CD",
                 title: `Lecture en cours`,
                 description: `**${queue[0].title}** | Demande par ***${queue[0].requested}***`
             }
-                }).then(response => { response.delete(5000) });
+                })
                 let connection = message.guild.voiceConnection
                 if (!connection) return console.log("Pas de connexion!");
                 intent = connection.playStream(queue[0].toplay)
@@ -98,7 +98,7 @@ var intent;
                     name: client.user.username,
                     icon_url: client.user.avatarURL
                 },
-                color: 0x00FF00,
+                color: "#AB49CD",
                 title: `Now Playing`,
                 description: `**${queue[0].title}** | Requested by ***${queue[0].requested}***`
             }
@@ -120,11 +120,11 @@ var intent;
                 }
             } else {
                 if(language == "fr"){
-                    message.channel.send('Il n\'y a plus de musique dans la playlist.').then(response => { response.delete(5000) });
+                    message.channel.send('Il n\'y a plus de musique dans la playlist.')
                     if (message.guild.voiceConnection) message.guild.voiceConnection.disconnect();
   
                 }else{
-                    message.channel.send('No more music in queue! Starting autoplaylist').then(response => { response.delete(5000) });
+                    message.channel.send('No more music in queue! Starting autoplaylist')
                     if (message.guild.voiceConnection) message.guild.voiceConnection.disconnect();
                   
                 }
