@@ -6,9 +6,9 @@ exports.run = (client, message, args) => {
 	let defineduser = message.mentions.users.first();
     let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
     if(!rUser) return message.channel.send("Je ne trouve pas cette utilisateur").then(msg => {msg.delete(5000)});
-      let rreason = args.join(" ").slice(31);
+      var text = message.content.substring(31);
 
-	  if (!rreason[0]){
+	  if (!text[0]){
 		  message.channel.send(`${message.author.username} vient de report ${defineduser.username}.\n\n **Raison :** Aucune . `);
 
          let repEmbed = new Discord.RichEmbed()
@@ -35,7 +35,7 @@ exports.run = (client, message, args) => {
          .addField("Utilisateur Report", `${defineduser.username} `, false)
          .addField("Report par", `${message.author.username}`, false)
          .addField("Dans ", message.channel, false)
-         .addField ("Raison",rreason, false)
+         .addField ("Raison",text, false)
          .setTimestamp()
          .setFooter(`raison`);
 
