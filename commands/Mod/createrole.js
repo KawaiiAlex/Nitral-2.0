@@ -12,7 +12,6 @@ exports.run = async (client, message, args) => {
       console.log("📛 Je n'es pas la permission 📛");
       return;
     }
-let args = message.content.split(" ").slice(1).join(" ");
 if (!args[0]) {return message.channel.send (`Veuillez mettreun nom au role .`)
  }else{
 
