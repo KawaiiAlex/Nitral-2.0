@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 exports.run = (client, message, args) => {
 
   var bang = ["https://cdn.weeb.sh/images/HyZiWLmvb.gif", "https://cdn.weeb.sh/images/r1Fa7EFsW.gif", "https://cdn.weeb.sh/images/Hy7KZUmDb.gif", "https://cdn.weeb.sh/images/S1-RQVFjZ.gif", "https://cdn.weeb.sh/images/BkzSQVFoZ.gif", "https://cdn.weeb.sh/images/BkvjZI7PW.gif", "https://cdn.weeb.sh/images/rJmPWI7wW.gif", "https://cdn.weeb.sh/images/SJeGENYoW.gif", "https://cdn.weeb.sh/images/BkzSQVFoZ.gif", "https://cdn.weeb.sh/images/rkccQNFib.gif", " https://cdn.weeb.sh/images/SkFub87DW.gif", "https://cdn.weeb.sh/images/BJADXEtoZ.gif" ]
-
+let defineduser = message.mentions.users.first();
 var banging = bang [Math.floor(Math.random() * bang.length)] ;
 if (!defineduser){
 var bangEmbed = new Discord.RichEmbed()
