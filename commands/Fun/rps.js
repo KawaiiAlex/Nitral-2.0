@@ -9,10 +9,10 @@ function getRandomInt(min, max) {
 exports.run = (client, message, args) => {
 
 
-  var msg1 = Array(3);
-		msg1[1] = "Rock :black_circle:";
-	    msg1[2] = "Paper :page_facing_up:";
-		msg1[3] = "Scissors :scissors:"
+  /*var msg1 = Array(3);
+		msg1[1] = "pierre :black_circle:";
+	    msg1[2] = "papier :page_facing_up:";
+		msg1[3] = "ciseaux :scissors:"
         var x = getRandomInt(0, 9);
 		if (x < 6){
          if (x < 3){
@@ -24,8 +24,8 @@ exports.run = (client, message, args) => {
 		}
 		else{ 
 			message.channel.sendMessage(msg1[2]);
-		}
-	
+		}*/
+	message.channel.sendMessage("En cours de développement ");
 } 
 exports.conf = {
   enabled: true,
@@ -37,5 +37,5 @@ exports.conf = {
 exports.help = {
   name: 'rps',
   description: 'Fait un pierre feuille ciseau avec le bot',
-  usage: 'rps [pierre , feuille , ciseau]'
+  usage: 'rps [pierre , papier , ciseau]'
 };
