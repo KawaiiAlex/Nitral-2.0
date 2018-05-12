@@ -15,39 +15,39 @@ exports.run = (client, message, args) => {
 			case 'pierre':
 				switch (botChoice) {
 		 	  	case 'pierre':
-						message.say(draw);
+						message.channel.send(draw);
 						break;
 					case 'papier':
-						message.say(botWon);
+						message.channel.send(botWon);
 						break;
 					case 'ciseaux':
-						message.say(playerWon);
+						message.channel.send(playerWon);
 						break;
 				}
 				break;
 			case 'papier':
 				switch (botChoice) {
 					case 'pierre':
-						message.say(playerWon);
+						message.channel.send(playerWon);
 						break;
 					case 'papier':
-						message.say(draw);
+						message.channel.send(draw);
 						break;
 					case 'ciseaux':
-		  			message.say(botWon);
+		  			message.channel.send(botWon);
 						break;
 				}
 				break;
 			case 'ciseaux':
 				switch (botChoice) {
 					case 'pierre':
-						message.say(botWon);
+						message.channel.send(botWon);
 						break;
 					case 'papier':
-						message.say(playerWon);
+						message.channel.send(playerWon);
 						break;
 					case 'ciseaux':
-						message.say(draw);
+						message.channel.send(draw);
 						break;
 				}
 				break;
