@@ -12,7 +12,7 @@ const opts = {
 
 exports.run = (client, message, args) => {
 
-    var errorlog = require("../../data/errors.json");
+    /*var errorlog = require("../../data/errors.json");
 
     var intent;
 
@@ -73,7 +73,8 @@ exports.run = (client, message, args) => {
             description: `${queue[0].title} | by ${queue[0].requested}`
         }
     }).then(response => { response.delete(5000) });
-    }     
+    }     */
+    message.channel.send("Commande en cours de création ...")
 }
 
 
