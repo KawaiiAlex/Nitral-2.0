@@ -50,7 +50,7 @@ exports.run = (client, message, args) => {
   exports.conf = {
     enabled: true,
     guildOnly: false,
-    aliases: [],
+    aliases: ['rp'],
     permLevel: 0
   };
 
