@@ -4,7 +4,7 @@ const fs = require("fs");
 const moment = require ("moment")
 exports.run = (client, message, args) => {
 
-  let afk = JSON.parse(fs.readFileSync("./afks.json", "utf8"));
+  let afk = JSON.parse(fs.readFileSync("./commands/afks.json", "utf8"));
 
   if (afk[message.author.id]) {
   delete afk[message.author.id];
@@ -13,7 +13,7 @@ exports.run = (client, message, args) => {
   }else{
     message.channel.send("J'ai enlever votre afk ");
   }
-  fs.writeFile("./afks.json", JSON.stringify(afk), (err) => { if (err) console.error(err);});
+  fs.writeFile("./commands/afks.json", JSON.stringify(afk), (err) => { if (err) console.error(err);});
   }else{
           message.channel.send("Tu n'es pas afk");
   }
