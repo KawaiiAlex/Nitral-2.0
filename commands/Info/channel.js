@@ -5,9 +5,7 @@ let channel = message.mentions.channels.first();
   if (!channel) {
     channel = message.channel;
   }
-  if (!channel[0]){
-    message.channel.send ("Veuillez spécifié un channel") 
-   } 
+  
 let channelembed = new Discord.RichEmbed()
 .setColor ("#15f153") 
 .addField ('Channel', `#${channel.name}`, false) 
