@@ -2,6 +2,7 @@ const { Command } = require('discord.js-commando');
 const choices = ['pierre', 'papier', 'ciseaux'];
 
 exports.run = (client, message, args) => {
+	const playerChoice = args.join(" ") 
 
 
 	if (message, { playerChoice }) {
