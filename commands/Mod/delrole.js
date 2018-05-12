@@ -30,7 +30,7 @@ exports.run = async (client, message, args) => {
 
     message.channel.send(`le role ${role} à était supprimé `) 
     
-  }
+  
   
 };
 
