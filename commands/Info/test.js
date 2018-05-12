@@ -31,3 +31,16 @@ exports.run = async (bot, msg, args) => {
         ])
     })).delete(30000);
 };
+
+exports.conf = {
+    enabled: true,
+    guildOnly: false,
+    aliases: ['te'],
+    permLevel: 0
+  };
+
+  exports.help = {
+    name: 'teqt',
+    description: 'Faîte n\'importe qu\'elle recherche d\'application apple store facilement',
+    usage: 'test <recherche>'
+  };
