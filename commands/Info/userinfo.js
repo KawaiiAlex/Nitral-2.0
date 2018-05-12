@@ -46,6 +46,7 @@ exports.run = async (client, message, args) => {
 
     let UIEmbed = new Discord.RichEmbed()
     .setDescription(`${definedUser.username}#${message.mentions.users.first().discriminator}`, false)
+    .setColor("#DE53D0")
     .addField("Pseudo", definedUser.username, false)
     .addField("#", definedUser.discriminator, false)
     .setThumbnail(definedUser.displayAvatarURL, false)
