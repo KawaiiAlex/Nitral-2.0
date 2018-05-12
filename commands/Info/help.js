@@ -22,7 +22,7 @@ exports.run = (client, message, params) => {
     //.addField ("**__Economie__** :euro: : *(bug)*","`coins`",false)
     .addField ("**__Fun__** :tada: :" ,"`anime`,`rps`, `roll`, `cat`, `dog`, `astrologia`, `triggered`, `dice`, `verlan`, `piece`, `say`" ,false)
     .addField ("**__Info__** :gear: :" ,"`uptime`,`role`,`channel`, `userinfo`, `serverinfo`, `warnlevel`, `time`, `botinfo`, `diserver`, `weather`" , false)
-    .addField ("**__Admin__** :tools: :" , "`roleadd`, `rolerem`,`prefix`, `createrole`, `mute`, `unmute`, `kick`, `ban`, `purge`, `report`, `warn`,`warnlevel`, `lockdown`, `time`",false)
+    .addField ("**__Admin__** :tools: :" , "`roleadd`, `rolerem`,`delrole`,`delchannel`,`prefix`, `createrole`, `mute`, `unmute`, `kick`, `ban`, `purge`, `report`, `warn`,`warnlevel`, `lockdown`, `time`",false)
     .addField("**__Musique__** :musical_score: :", "`play`, `stop`, `skip`, `volume`",false)
     .addField("**__Social__** :handshake: :", "`bite`, `kiss`, `hug`, `cry`, `pat`, `pout`, `punch`, `handholding`, `bang`, `stare`, `slap`, `fuck`, `res`, `everyone`, `troll`, `highfive`, `pollc`",false)
     .addField("**__NSFW__** :smirk:", "`4k`, `amateur`, `asian`,`fuck`, `cosplay`, `dick`, `gif`, `hentai`, `milf`, `public`, `pussy`, `snapchat`, `uniform`",false)
