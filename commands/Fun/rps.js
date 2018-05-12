@@ -64,10 +64,11 @@ exports.run = (client, message, args) => {
 exports.conf = { 
 	enabled: true, 
 	guildOnly: false, 
-	aliases: [], 
+	aliases: ['rps'], 
 	permLevel: 0
 }; 
 exports.help = {
 	 name: 'rps', 
 	 description: 'Fait un pierre feuille ciseau avec le bot ', 
-	 usage: 'rps pierre, feuilles, ciseaux ' };
+	 usage: 'rps pierre, feuilles, ciseaux ' 
+};
