@@ -1,11 +1,17 @@
 const Discord = require('discord.js')
 const moment = require ("moment")
 const ms = require("ms");
+const sm = require("string-similarity");
+
 exports.run = (client, message, args) => {
   
   let members = [];
   let indexes = [];
 
+let match = sm.findBestMatch(args.join(' '), members);
+let username = match.bestMatch.target;
+  let member = message.guild.members.get(indexes[members.indexOf(username)])
+  
   const millisCreated = new Date().getTime() - message.guild.createdAt.getTime();
     const daysCreated = millisCreated / 1000 / 60 / 60 / 24;
 
