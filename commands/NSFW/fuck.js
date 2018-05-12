@@ -16,7 +16,7 @@ exports.run = (client, message, args) => {
                   const embed = new Discord.RichEmbed()
                       .setTimestamp()
                       .setImage(url)
-                  .settitle (`<@${message.author.id}> fait l'amour a  ${text}`)
+                  .setTitle (`<@${message.author.id}> fait l'amour a  ${text}`)
                       .setColor(`#DE53D0`)
                       
                        message.channel.send({ embed });
