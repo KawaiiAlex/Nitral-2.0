@@ -8,8 +8,8 @@ exports.run = (client, message, args) => {
   if (afk[message.author.id]) {
 return message.channel.send("Tu es déjà afk ");
   }else{
-    let args1 = message.content.split(" ").slice(1);
-      if (args1.length === 0) {
+    let args = message.content.split(" ").slice(1);
+      if (args.length === 0) {
         afk[message.author.id] = {"reason" : true};
 
         message.channel.send("Tu es désormais afk, met `++remafk` pour enlever ton afk")
