@@ -8,13 +8,13 @@ exports.run = (client, message, args) => {
   if (afk[message.author.id]) {
 return message.channel.send("Tu es déjà afk ");
   }else{
-    let args = message.content.split(" ").slice(1);
+    
       if (args.length === 0) {
         afk[message.author.id] = {"reason" : true};
 
         message.channel.send("Tu es désormais afk, met `++remafk` pour enlever ton afk")
       }else{
-        afk[message.author.id] = {"reason" : args1.join(" ")};
+        afk[message.author.id] = {"reason" : args.join(" ")};
         message.channel.send("Tu es désormais afk, met `++remafk` pour enlever ton afk" )
       }
         fs.writeFile("./commands/afks.json", JSON.stringify(afk), (err) => { if (err) console.error(err);});
