@@ -8,15 +8,17 @@ function getRandomInt(min, max) {
 
 exports.run = (client, message, args) => {
 
-
-  /*var msg1 = Array(3);
+	if(!args[0]){
+		message.channel.send ("merci de choisir pierre, papier, ciseaux") 
+} else{
+  var msg1 = Array(3);
 		msg1[1] = "pierre :black_circle:";
 	    msg1[2] = "papier :page_facing_up:";
 		msg1[3] = "ciseaux :scissors:"
         var x = getRandomInt(0, 9);
 		if (x < 6){
          if (x < 3){
-			message.channel.sendMessage(msg1[1]);
+			message.channel.send(msg1[1]);
 		}
 		else{
                message.channel.sendMessage(msg1[3]);
@@ -24,7 +26,7 @@ exports.run = (client, message, args) => {
 		}
 		else{ 
 			message.channel.sendMessage(msg1[2]);
-		}*/
+		}
 	message.channel.sendMessage("En cours de développement ");
 } 
 exports.conf = {
