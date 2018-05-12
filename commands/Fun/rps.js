@@ -28,13 +28,8 @@ exports.run = (client, message, args) => {
         msg.reply("You Won!");
       }
     }
-  },
-  usage : () => {
-    return "+rps rock/paper/scissors";
-  },
-  description : () => {
-    return "Used for playing rock, paper, scissors against the bot.";
   }
+ 
 }
 
 exports.conf = {
