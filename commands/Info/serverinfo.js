@@ -29,10 +29,10 @@ exports.run = (client, message, args) => {
       definedUser = mention || member.user
         definedUser2 = message.mentions.members.first() || message.guild.members.get(args[0]) || member
     }
-  const millisCreated = new Date().getTime() - definedUser.createdAt.getTime();
+  const millisCreated = new Date().getTime() - message.guild.createdAt.getTime();
     const daysCreated = millisCreated / 1000 / 60 / 60 / 24;
 
-    const millisJoined = new Date().getTime() - member.joinedAt.getTime();
+    const millisJoined = new Date().getTime() - message.member.joinedAt.getTime();
 const daysJoined = millisJoined / 1000 / 60 / 60 / 24;
 
 
@@ -42,13 +42,12 @@ const daysJoined = millisJoined / 1000 / 60 / 60 / 24;
   .setColor("#15f153")
   .setThumbnail(sicon)
   .addField("Nom du serveur", message.guild.name,false )
-  .addField("Date de création", `${moment.utc(member.joinedAt).format("D/M/Y, HH:mm:ss")} ${daysJoined.toFixed(0)} jours`,false);
-  .addField("Date de venue", `${moment.utc(message.member.joinedAt).format("D/M/Y, HH:mm:ss")} (${ms(Date.now()- moment.utc(message.member.joinedAt), {long: true})})`, false )
+  .addField("Date de création", `${moment.utc(member.joinedAt).format("D/M/Y, HH:mm:ss")} ${daysCreated.toFixed(0)} jours`,false)
+  .addField("Date de venue", `${moment.utc(message.member.joinedAt).format("D/M/Y, HH:mm:ss")} ${daysJoined.toFixed(0)} jours`, false )
   .addField("Membres Totaux", message.guild.memberCount,false)
   .addField ("Propriétaire du serveur", `<@${message.guild.owner.id}>`,false)
   .addField ("ID du serveur", message.guild.id, false)
  .setImage ( sicon)
-
 .setTimestamp()
   .setFooter(`${message.author.username} | Server Info`);
   return message.channel.send(serverembed);
