@@ -26,6 +26,7 @@ exports.run = (client, message, args) => {
    } 
 channel.delete();
   message.channel.send("Le role a etait bel et bien supprimé") 
+    }
     
 };
 exports.conf = {
