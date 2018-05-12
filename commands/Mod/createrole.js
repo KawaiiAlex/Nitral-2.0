@@ -7,7 +7,7 @@ exports.run = async (client, message, args) => {
       console.log("📛 Tu n'as pas la permission 📛");
       return;
     }
-    else if (!message.channel.permissionsFor(bot.user).hasPermission("MANAGE_ROLES")) {
+    else if (!message.channel.permissionsFor(client.user).hasPermission("MANAGE_ROLES")) {
       message.channel.send ("📛 Je n'es pas la permission 📛");
       console.log("📛 Je n'es pas la permission 📛");
       return;
