@@ -5,7 +5,7 @@ exports.run = (client, message, args) => {
 	const playerChoice = args.join(" ") 
 	if (!playerChoice[0]) {
 		message.channel.send('Merci de préciser votre choix : pierre, feuilles, ciseaux ');
-
+}
 
 	if (message, { playerChoice }) {
 		const botChoice = choices[Math.floor(Math.random() * choices.length)];
