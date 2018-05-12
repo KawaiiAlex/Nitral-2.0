@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-exports.run = (client, message) => {
+exports.run = (client, message, args) => {
 
   let role = message.mentions.roles.first();
   if (!role) {
