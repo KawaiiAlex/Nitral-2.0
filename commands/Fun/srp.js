@@ -4,7 +4,7 @@ const choices = ['rock', 'paper', 'scissors'];
 
 exports.run = (client, message, args) => {
 
-	async run(message, { playerChoice }) {
+	if(message, { playerChoice }) {
 		const botChoice = choices[Math.floor(Math.random() * choices.length)];
 		const botWon = `Kaz Bot won! He chose ${botChoice}!`;
 		const playerWon = `${message.member.displayName} won! Kaz Bot chose ${botChoice}!`;
