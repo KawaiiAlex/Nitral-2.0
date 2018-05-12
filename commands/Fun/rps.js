@@ -66,7 +66,7 @@ exports.run = (client, message, args) => {
 exports.conf = { 
 	enabled: true, 
 	guildOnly: false, 
-	aliases: [], 
+	aliases: ['rps'], 
 	permLevel: 0
 }; 
 exports.help = {
