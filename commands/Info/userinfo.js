@@ -42,14 +42,14 @@ const daysJoined = millisJoined / 1000 / 60 / 60 / 24;
   .setDescription("**Informations Utilisateurs **")
   .setColor("#DE53D0")
   .setThumbnail(definedUser.displayAvatarURL)
-  .addField("**Pseudo**", definedUser.username, true)
-  .addField("**#**", definedUser.discriminator, true)
-  .addField("**ID**", definedUser.id, true)
-  .addField("**Bot**", `${definedUser.bot ? "Oui" : "Non"}`, true)
-  .addField("**Statuts**",definedUser.presence.status, true)
-  .addField("**Jeu**", `${definedUser.presence.game ? `${definedUser.presence.game.name}` : "Ne joue a rien"}`, true)
-  .addField("**Création du compte**", `${moment.utc(definedUser.createdAt).format("D/M/Y, HH:mm:ss")} ${daysCreated.toFixed(0)} jours`)
-  .addField("**Date d'arrivée sur le serv**", `${moment.utc(member.joinedAt).format("D/M/Y, HH:mm:ss")} ${daysJoined.toFixed(0)} jours`);
+  .addField("**Pseudo**", definedUser.username, false)
+  .addField("**#**", definedUser.discriminator, false)
+  .addField("**ID**", definedUser.id, false)
+  .addField("**Bot**", `${definedUser.bot ? "Oui" : "Non"}`, false)
+  .addField("**Statuts**",definedUser.presence.status, false)
+  .addField("**Jeu**", `${definedUser.presence.game ? `${definedUser.presence.game.name}` : "Ne joue a rien"}`, false)
+  .addField("**Création du compte**", `${moment.utc(definedUser.createdAt).format("D/M/Y, HH:mm:ss")} ${daysCreated.toFixed(0)} jours`,false)
+  .addField("**Date d'arrivée sur le serv**", `${moment.utc(member.joinedAt).format("D/M/Y, HH:mm:ss")} ${daysJoined.toFixed(0)} jours`,false);
 
   message.channel.send(uEmbed);
 }
