@@ -49,7 +49,7 @@ const daysJoined = millisJoined / 1000 / 60 / 60 / 24;
   .addField("**Statuts**",definedUser.presence.status, true)
   .addField("**Jeu**", `${definedUser.presence.game ? `${definedUser.presence.game.name}` : "Ne joue a rien"}`, true)
   .addField("**Création du compte**", `${moment.utc(definedUser.createdAt).format("D/M/Y, HH:mm:ss")} ${daysCreated.toFixed(0)} jours`)
-  .addField("**Date d'arrivée sur le serv**", `${moment.utc(definedUser.joinedAt).format("D/M/Y, HH:mm:ss")} ${daysJoined.toFixed(0)} jours`);
+  .addField("**Date d'arrivée sur le serv**", `${moment.utc(member.joinedAt).format("D/M/Y, HH:mm:ss")} ${daysJoined.toFixed(0)} jours`);
 
   message.channel.send(uEmbed);
 }
