@@ -25,5 +25,5 @@ exports.conf = {
   exports.help = {
     name: 'role',
     description: 'Donne des informations sur le role mentionné', 
-    usage: 'channel <mention du role>'
+    usage: 'role <mention du role>'
 };
