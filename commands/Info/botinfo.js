@@ -80,7 +80,7 @@ const used = process.memoryUsage().heapUsed / 1024 / 1024;
       .addField ("Données serveur", client.guilds.size, false)
       .addField ("Données utilisateurs", client.users.size, false)
       .addField ("Le trello du bot", "Voilà mon [Trello](https://trello.com/b/rUl5NBRH/nitral) Pour voir l'avancement du bot ",false )
-        .addField ("Invitation du bot et invitation serveur ", "Voici le lien du [Bot](https://bots.discord.pw/bots/435585785295667200) pour rejoindre le serveur et m'inviter sur ton serveur ", true)
+        .addField ("Invitation du bot et invitation serveur ", "Voici le lien du [Bot](https://discordbots.org/bot/435585785295667200) pour rejoindre le serveur et m'inviter sur ton serveur ", true)
        .addField ("Langage de programmation", "Crée en JavaScript", false)
       .setTimestamp()
       .setFooter(`${message.author.username} | Bot Info`);
