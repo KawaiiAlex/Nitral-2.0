@@ -17,7 +17,7 @@ exports.run = (client, message, args) => {
                       .setTimestamp()
                       .setImage(url)
                   .settitle (`<@${message.author.id}> fait l'amour a  ${text}`)
-                      .setColor(`${message.guild.me.displayHexColor!=='#00000' ? message.guild.me.displayHexColor : 0xffffff}`)
+                      .setColor(`#DE53D0`)
                       
                        message.channel.send({ embed });
     })
