@@ -12,7 +12,7 @@ const opts = {
 
 exports.run = (client, message, args) => {
 
-    var errorlog = require("../../data/errors.json");
+   /* var errorlog = require("../../data/errors.json");
 
     var intent;
 
@@ -61,8 +61,8 @@ exports.run = (client, message, args) => {
             message.channel.send("Bot is not playing")
         player.pause();
         message.channel.send("Pausing music...")
-    }
-   
+    }*/
+   message.channel.send("Commande en cours de création ...")
 }
 
 
