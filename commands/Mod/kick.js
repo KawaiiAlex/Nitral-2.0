@@ -8,7 +8,7 @@ let defineduser = message.mentions.users.first();
   console.log("📛 Tu n'as pas la permission 📛");
   return;
 }
-else if (!message.channel.permissionsFor(bot.user).hasPermission("KICK_MEMBERS")) {
+else if (!message.channel.permissionsFor(client.user).hasPermission("KICK_MEMBERS")) {
   message.channel.send ("📛 Je n'es pas la permission 📛");
   console.log("📛 Je n'es pas la permission 📛");
   return;
