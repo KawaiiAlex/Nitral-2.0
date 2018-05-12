@@ -4,7 +4,7 @@ const fs = require("fs");
 const moment = require ("moment")
 exports.run = (client, message, args) => {
 
-  let afk = JSON.parse(fs.readFileSync("../../afks.json", "utf8"));
+  let afk = JSON.parse(fs.readFileSync("./afks.json", "utf8"));
 
   if (afk[message.author.id]) {
   delete afk[message.author.id];
