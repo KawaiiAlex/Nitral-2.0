@@ -59,7 +59,7 @@ exports.run = async (client, message, args) => {
 
     message.channel.send(UIEmbed)
 };
-.setColor("#DE53D0")
+
 exports.conf = {
     enabled: true,
     guildOnly: false,
