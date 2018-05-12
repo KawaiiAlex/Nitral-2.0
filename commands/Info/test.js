@@ -1,4 +1,4 @@
-onst limitTo = (array, max, joiner) => array.slice(0, max).join(joiner) + (array.length <= max ? '' : '...');
+const limitTo = (array, max, joiner) => array.slice(0, max).join(joiner) + (array.length <= max ? '' : '...');
 
 const inGuild = (guild, user) => !!guild.members.find('id', user.id);
 
