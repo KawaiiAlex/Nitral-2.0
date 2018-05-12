@@ -53,6 +53,18 @@ exports.run = (client, message, args) => {
 		  			message.channel.send(botWon);
 						break;
 				}
+				case 'feuilles':
+				switch (botChoice) {
+					case 'pierre':
+						message.channel.send(playerWon);
+						break;
+					case 'papier':
+						message.channel.send(draw);
+						break;
+					case 'ciseaux':
+		  			message.channel.send(botWon);
+						break;
+				}
 				break;
 			case 'ciseaux':
 				switch (botChoice) {
