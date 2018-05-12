@@ -31,12 +31,12 @@ channel.delete();
 exports.conf = {
     enabled: true,
     guildOnly: false,
-    aliases: ['r'],
+    aliases: ['dc'],
     permLevel: 0
   };
 
   exports.help = {
-    name: 'delrole',
-    description: 'Supprime le role mentionné', 
-    usage: 'delrole <mention du role>'
+    name: 'delchannel',
+    description: 'Supprime le channel mentionné', 
+    usage: 'delchannel <mention du role>'
 };
