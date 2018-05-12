@@ -1,7 +1,9 @@
 const Discord = require('discord.js')
 
-function rand(low, high) {
-    return Math.random() * (high + 1 - low) + low | 0;
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min;
 }
 
 exports.run = (client, message, args) => {
