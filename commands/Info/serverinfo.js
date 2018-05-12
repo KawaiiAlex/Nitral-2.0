@@ -9,7 +9,7 @@ exports.run = (client, message, args) => {
   .setColor("#15f153")
   .setThumbnail(sicon)
   .addField("Nom du serveur", message.guild.name,false )
-  .addField("Date de création", `${moment.utc(message.guild.createdAt).format("D/M/Y, HH:mm:ss")} (${ms(Date.now()- moment.utc(message.guild.createdAt), {long: true})})`, false )
+  .addField("Date de création", `${moment.utc(member.joinedAt).format("D/M/Y, HH:mm:ss")} ${daysJoined.toFixed(0)} jours`,false);
   .addField("Date de venue", `${moment.utc(message.member.joinedAt).format("D/M/Y, HH:mm:ss")} (${ms(Date.now()- moment.utc(message.member.joinedAt), {long: true})})`, false )
   .addField("Membres Totaux", message.guild.memberCount,false)
   .addField ("Propriétaire du serveur", `<@${message.guild.owner.id}>`,false)
@@ -21,7 +21,7 @@ exports.run = (client, message, args) => {
   return message.channel.send(serverembed);
   console.log("Commande serverinfo ")
 }
-
+ 
   exports.conf = {
     enabled: true,
     guildOnly: false,
