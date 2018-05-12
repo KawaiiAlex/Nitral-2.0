@@ -8,7 +8,7 @@ let channel = message.mentions.channels.first();
 
   message.channel.send({
     embed: {
-      color: Bastion.colors.BLUE,
+      color: '#15f153' ,
       fields: [
         {
           name: 'Channel',
