@@ -1,55 +1,94 @@
         	const { Command } = require('discord.js-commando');
-const choices = ['pierre', 'papier', 'ciseaux'];
+const choix = ['pierre', 'papier', 'ciseaux'];
 
 exports.run = (client, message, args) => {
-	const playerChoice = args.join(" ") 
-	if (!playerChoice[0]) {
+	const choixjoueur = args.join(" ") 
+	if (!choixjoueur[0]) {
 		message.channel.send('Merci de préciser votre choix : pierre, feuilles, ciseaux ');
 }
 
-	if (message, { playerChoice }) {
-		const botChoice = choices[Math.floor(Math.random() * choices.length)];
-		const botWon = `J'ai gagné, j'ai choisi ${botChoice}!`;
-		const playerWon = `${message.member.displayName} à gagné la parti ! j'ai  choisie ${botChoice}!`;
-		const draw = `Égalité ! J'ai choisi ${botChoice}!`;
+	if (message, { choixjoueur }) {
+		const choixbot = choix[Math.floor(Math.random() * choix.length)];
+		const botgagnant = `J'ai gagné, j'ai choisi ${choixbot}!`;
+		const joueurgagnant = `Tu as gagné la parti ! j'ai  choisie ${choixbot}!`;
+		const égalite = `Égalité ! J'ai choisi ${choixbot}!`;
 
-		switch (playerChoice) {
-			case 'pierre':
-				switch (botChoice) {
+		switch (choixjoueur) {
+			
 		 	  	case 'pierre':
-						message.channel.send(draw);
+						message.channel.send(égalite);
 						break;
 					case 'papier':
-						message.channel.send(botWon);
+						message.channel.send(botgagnant);
 						break;
 					case 'ciseaux':
-						message.channel.send(playerWon);
+						message.channel.send(joueurgagnant);
 						break;
 				}
 				break;
-			case 'papier':
-				switch (botChoice) {
-					case 'pierre':
-						message.channel.send(playerWon);
+		
+		 	  	case 'pierres':
+						message.channel.send(égalite);
 						break;
 					case 'papier':
-						message.channel.send(draw);
+						message.channel.send(botgagnant);
 						break;
 					case 'ciseaux':
-		  			message.channel.send(botWon);
+						message.channel.send(joueurgagnant);
+						break;
+				}
+				break;
+	
+		
+			case 'papier':
+				switch (choixbot) {
+					case 'pierre':
+						message.channel.send(joueurgagnant);
+						break;
+					case 'papier':
+						message.channel.send(égalite);
+						break;
+					case 'ciseaux':
+		  			message.channel.send(botgagnant);
+						break;
+				}
+				break;
+				case 'feuilles':
+				switch (choixbot) {
+					case 'pierre':
+						message.channel.send(joueurgagnant);
+						break;
+					case 'papier':
+						message.channel.send(égalite);
+						break;
+					case 'ciseaux':
+		  			message.channel.send(botgagnant);
+						break;
+				}
+				break;
+				case 'feuille':
+				switch (choixbot) {
+					case 'pierre':
+						message.channel.send(joueurgagnant);
+						break;
+					case 'papier':
+						message.channel.send(égalite);
+						break;
+					case 'ciseaux':
+		  			message.channel.send(botgagnant);
 						break;
 				}
 				break;
 			case 'ciseaux':
-				switch (botChoice) {
+				switch (choixbot) {
 					case 'pierre':
-						message.channel.send(botWon);
+						message.channel.send(botgagnant);
 						break;
 					case 'papier':
-						message.channel.send(playerWon);
+						message.channel.send(joueurgagnant);
 						break;
 					case 'ciseaux':
-						message.channel.send(draw);
+						message.channel.send(égalite);
 						break;
 				}
 				break;
@@ -70,5 +109,5 @@ exports.conf = {
 exports.help = {
 	 name: 'rps', 
 	 description: 'Fait un pierre feuille ciseau avec le bot ', 
-	 usage: 'rps pierre, feuilles, ciseaux ' 
+	 usage: 'rps pierre, feuilles, ciseaux\n\n**__Exemple__**:\n++rps <pierre/feuilles/ciseaux> ' 
 };
