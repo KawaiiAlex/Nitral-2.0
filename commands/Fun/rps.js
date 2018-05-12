@@ -23,7 +23,7 @@ exports.run = (client, message, args) => {
 		else{ 
 			message.channel.sendMessage(msg1[2]);
 		}
-
+} 
 exports.conf = {
   enabled: true,
   guildOnly: false,
