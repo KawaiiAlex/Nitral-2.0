@@ -11,7 +11,7 @@ module.exports = message => {
   if(!prefixes[message.guild.id]){
     prefixes[message.guild.id] = {
       prefixes: settings.prefix
-    };
+    }
   }
   /*let prefix = prefixes[message.guild.id].prefixes;
   if(!message.content.startsWith(prefix)) return;
@@ -40,4 +40,4 @@ module.exports = message => {
     cooldown.delete(message.author.id)
   }, cdseconds * 1000)*/
 
-};
+}
