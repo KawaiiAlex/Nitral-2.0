@@ -31,7 +31,7 @@ role.delete();
 exports.conf = {
     enabled: true,
     guildOnly: false,
-    aliases: ['r'],
+    aliases: ['dr'],
     permLevel: 0
   };
 
