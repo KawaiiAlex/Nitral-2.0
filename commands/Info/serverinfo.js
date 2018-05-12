@@ -2,6 +2,39 @@ const Discord = require('discord.js')
 const moment = require ("moment")
 const ms = require("ms");
 exports.run = (client, message, args) => {
+  
+  if(message.author.bot) return;
+  if(message.channel.type !== "text") return;
+  
+  let members = [];
+  let indexes = [];
+  
+  message.guild.members.forEach(function(member){
+    members.push(member.user.username);
+    indexes.push(member.id);
+  })
+  
+  let match = sm.findBestMatch(args.join(' '), members);
+  let username = match.bestMatch.target;
+  
+    let member = message.guild.members.get(indexes[members.indexOf(username)])
+    
+     let definedUser = "";
+     let definedUser2 = "";
+    if(!args[0]) {
+      definedUser = message.author
+      definedUser2 = message.member
+    } else {
+      let mention = message.mentions.users.first()
+      definedUser = mention || member.user
+        definedUser2 = message.mentions.members.first() || message.guild.members.get(args[0]) || member
+    }
+  const millisCreated = new Date().getTime() - definedUser.createdAt.getTime();
+    const daysCreated = millisCreated / 1000 / 60 / 60 / 24;
+
+    const millisJoined = new Date().getTime() - member.joinedAt.getTime();
+const daysJoined = millisJoined / 1000 / 60 / 60 / 24;
+
 
   let sicon = message.guild.iconURL;
   let serverembed = new Discord.RichEmbed()
