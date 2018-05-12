@@ -10,7 +10,7 @@ exports.run = (client, message) => {
    } 
 let roleembed = new Discord.RichEmbed()
 .setColor ("#15f153") 
-.addField ('Channel', `#${role.name}`, false) 
+.addField ('Role', `#${role.name}`, false) 
 .addField ('ID', role.id, false) 
   message.channel.send(roleembed) 
     
