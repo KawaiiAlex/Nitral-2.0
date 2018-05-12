@@ -1,6 +1,6 @@
 const settings = require('../config.json');
 let cooldown = new Set();
-let cdseconds = 1;
+let cdseconds = 5;
 const fs = require("fs");
 module.exports = message => {
   const client = message.client;
@@ -11,7 +11,7 @@ module.exports = message => {
   if(!prefixes[message.guild.id]){
     prefixes[message.guild.id] = {
       prefixes: settings.prefix
-    }
+    };
   }
   let prefix = prefixes[message.guild.id].prefixes;
   if(!message.content.startsWith(prefix)) return;
@@ -40,4 +40,4 @@ module.exports = message => {
     cooldown.delete(message.author.id)
   }, cdseconds * 1000)
 
-}
+};
