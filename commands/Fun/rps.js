@@ -28,6 +28,7 @@ exports.run = (client, message, args) => {
 			message.channel.sendMessage(msg1[2]);
 		}
 	message.channel.sendMessage("En cours de développement ");
+	}
 } 
 exports.conf = {
   enabled: true,
