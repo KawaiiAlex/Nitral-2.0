@@ -54,6 +54,12 @@ exports.run = (client, message, args) => {
             message.channel.send('Aucune musique n\'est joué à ce moment.')
         if (player.playing) 
             message.channel.send('La musique joue déjà')
+           } 
+            var queue = getQueue(message.guild.id);
+        player.resume();
+        if(language=='fr'){
+            message.channel.send("Reprise de la musique ...")
+        }
         }else{
         if (!message.member.voiceChannel) 
             message.channel.send('You need to be in a voice channel')
