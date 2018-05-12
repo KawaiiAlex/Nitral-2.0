@@ -20,13 +20,14 @@ exports.run = (client, message, args) => {
       }
       else if (args.name) {
         channel = message.guild.channels.find('name', args.name.join(' '));
-}
+    }
+    }
   if (channel[0]) {
     message.channel.send ("Veuillez spécifié un role") 
    } 
 channel.delete();
   message.channel.send("Le role a etait bel et bien supprimé") 
-    }
+    
     
 };
 exports.conf = {
