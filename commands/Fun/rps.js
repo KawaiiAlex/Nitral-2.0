@@ -25,6 +25,10 @@ exports.run = (client, message, args) => {
 		else{ 
 			message.channel.sendMessage(msg1[2]);
 		}
+	if (msg1[1] < msg1[2] ){
+		message.channel.sendMessage("G1")
+		}
+	
 } 
 exports.conf = {
   enabled: true,
