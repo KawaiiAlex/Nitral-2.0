@@ -12,7 +12,7 @@ exports.run = (client, message, args) => {
 	if (message, { choixjoueur }) {
 		const choixbot = choix[Math.floor(Math.random() * choix.length)];
 		const botgagnant = `J'ai gagné, j'ai choisi ${choixbot}!`;
-		const joueurgagnant = `Tu à gagné la parti ! j'ai  choisie ${botChoice}!`;
+		const joueurgagnant = `Tu à gagné la parti ! j'ai  choisie ${choixbot}!`;
 		const égalite = `Égalité ! J'ai choisi ${choixbot}!`;
 
 		switch (choixjoueur) {
