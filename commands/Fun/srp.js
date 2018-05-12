@@ -2,24 +2,7 @@ const { Command } = require('discord.js-commando');
 
 const choices = ['rock', 'paper', 'scissors'];
 
-module.exports = class CoinCommand extends Command {
-	constructor(client) {
-		super(client, {
-			name: 'rps',
-			group: 'fun',
-			memberName: 'rps',
-			description: 'Plays Rock, Paper, Scissors with the bot.',
-			examples: ['rps rock', 'rps paper', 'rps scissors'],
-			guildOnly: false,
-			args: [
-				{
-					key: 'playerChoice',
-					prompt: 'What would you like to choose?',
-					type: 'string',
-				},
-			],
-		});
-	}
+exports.run = (client, message, args) => {
 
 	async run(message, { playerChoice }) {
 		const botChoice = choices[Math.floor(Math.random() * choices.length)];
