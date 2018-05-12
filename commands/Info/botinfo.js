@@ -72,7 +72,7 @@ const used = process.memoryUsage().heapUsed / 1024 / 1024;
       .addField("Nom du bot", client.user.username, false)
       .addField("Date de création",`${moment.utc(client.user.createdAt).format("D/M/Y, HH:mm:ss")}`, false )
       .addField ('📈 Utilisation mémoire' , `${Math.round(used * 100) / 100} MB/500MB`, false)
-             .addField ('🚧 Version du bot', '1.0.2',false)
+             .addField ('🚧 Version du bot', '1.1.0',false)
   .addField(':white_check_mark: Bot actif depuis :', dateString, false )
               .addField ('Librairie', 'Discord.js', false)
   .addField ("ID du bot ", client.user.id,false )
