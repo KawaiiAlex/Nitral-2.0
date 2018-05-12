@@ -59,7 +59,7 @@ exports.run = (client, message, args) => {
         player.resume();
         if(language=='fr'){
             message.channel.send("Reprise de la musique ...")
-        }
+        
         }else{
         if (!message.member.voiceChannel) 
             message.channel.send('You need to be in a voice channel')
