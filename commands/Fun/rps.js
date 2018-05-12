@@ -1,4 +1,4 @@
-        	const { Command } = require('discord.js-commando');
+const { Command } = require('discord.js-commando');
 const choix = ['pierre', 'papier', 'ciseaux'];
 
 exports.run = (client, message, args) => {
@@ -14,9 +14,10 @@ exports.run = (client, message, args) => {
 		const égalite = `Égalité ! J'ai choisi ${choixbot}!`;
 
 		switch (choixjoueur) {
-			
+			case 'pierre':
+				switch (choixbot) {
 		 	  	case 'pierre':
-						message.channel.send(égalite);
+						message.channel.send(draw);
 						break;
 					case 'papier':
 						message.channel.send(botgagnant);
@@ -26,47 +27,7 @@ exports.run = (client, message, args) => {
 						break;
 				}
 				break;
-		
-		 	  	case 'pierres':
-						message.channel.send(égalite);
-						break;
-					case 'papier':
-						message.channel.send(botgagnant);
-						break;
-					case 'ciseaux':
-						message.channel.send(joueurgagnant);
-						break;
-				}
-				break;
-	
-		
 			case 'papier':
-				switch (choixbot) {
-					case 'pierre':
-						message.channel.send(joueurgagnant);
-						break;
-					case 'papier':
-						message.channel.send(égalite);
-						break;
-					case 'ciseaux':
-		  			message.channel.send(botgagnant);
-						break;
-				}
-				break;
-				case 'feuilles':
-				switch (choixbot) {
-					case 'pierre':
-						message.channel.send(joueurgagnant);
-						break;
-					case 'papier':
-						message.channel.send(égalite);
-						break;
-					case 'ciseaux':
-		  			message.channel.send(botgagnant);
-						break;
-				}
-				break;
-				case 'feuille':
 				switch (choixbot) {
 					case 'pierre':
 						message.channel.send(joueurgagnant);
@@ -109,5 +70,5 @@ exports.conf = {
 exports.help = {
 	 name: 'rps', 
 	 description: 'Fait un pierre feuille ciseau avec le bot ', 
-	 usage: 'rps pierre, feuilles, ciseaux\n\n**__Exemple__**:\n++rps <pierre/feuilles/ciseaux> ' 
+	 usage: 'rps <pierre,feuilles,ciseaux> ' 
 };
