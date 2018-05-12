@@ -5,24 +5,15 @@ let channel = message.mentions.channels.first();
   if (!channel) {
     channel = message.channel;
   }
-
-  message.channel.send({
-    embed: {
-      color: '#15f153' ,
-      fields: [
-        {
-          name: 'Channel',
-          value: `#${channel.name}`,
-          inline: true
-        },
-        {
-          name: 'ID',
-          value: channel.id,
-          inline: true
-        }
-      ]
-    }
-  })
+  if (!channel[0]){
+    message.channel.send ("Veuillez spécifié un channel") 
+   } 
+let channelembed = new Discord.RichEmbed()
+.setColor ("#15f153") 
+.addField ('Channel', `#${channel.name}`, false) 
+.addField ('ID', channel.id, false) 
+  message.channel.send(channelembed) 
+    
 };
 exports.conf = {
     enabled: true,
