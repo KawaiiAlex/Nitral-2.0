@@ -3,6 +3,10 @@ const choices = ['pierre', 'papier', 'ciseaux'];
 
 exports.run = (client, message, args) => {
 	const playerChoice = args.join(" ") 
+	if(!playerChoice[0]){
+		message.channel.send ('Merci de préciser votre choix : pierre, feuilles, ciseaux ');
+		}
+
 
 
 	if (message, { playerChoice }) {
@@ -52,8 +56,7 @@ exports.run = (client, message, args) => {
 				}
 				break;
 			default:
-				return message.channel.send ('Merci de préciser votre choix : pierre, feuilles, ciseaux ');
-
+				
 		}
 
 	}
