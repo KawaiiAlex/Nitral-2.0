@@ -4,13 +4,13 @@ const ms = require("ms");
 let warns = JSON.parse(fs.readFileSync("./warnings.json", "utf8"));
 
 exports.run = (client, message, args) => {
-let defineduser = message.mentions.users.first();
+/*let defineduser = message.mentions.users.first();
         if (!message.channel.permissionsFor(message.author).hasPermission("KICK_MEMBERS")) {
           message.channel.send ("📛 Tu n'as pas la permission 📛");
           console.log("📛 Tu n'as pas la permission 📛");
           return;
         }
-        else if (!message.channel.permissionsFor(bot.user).hasPermission("KICK_MEMBERS")) {
+        else if (!message.channel.permissionsFor(client.user).hasPermission("KICK_MEMBERS")) {
           message.channel.send ("📛 Je n'es pas la permission 📛");
           console.log("📛 Je n'es pas la permission 📛");
           return;
@@ -47,7 +47,8 @@ let defineduser = message.mentions.users.first();
           if(warns[wUser.id].warns == 24){
             message.guild.member(wUser).ban();
             message.reply(`<@${wUser.id}> a etait ban. Car il a atteint 24 warns. `)
-          }
+          }*/
+        message.channel.send ('La commande est off') 
         }
 
 exports.conf = {
